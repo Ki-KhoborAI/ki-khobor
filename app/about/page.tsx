@@ -182,7 +182,7 @@ function AboutHero() {
                 Read Our Manifesto
               </a>
               <a
-                href="#why-we-build"
+                href="#founder-stories"
                 className="inline-flex items-center justify-center bg-white/5 hover:bg-white/10 text-white border border-white/15 font-semibold text-sm px-7 py-3.5 rounded-xl backdrop-blur-md transition-all duration-300 active:scale-95 scroll-smooth"
               >
                 Our Story
@@ -396,7 +396,7 @@ export default function AboutPage() {
             <div className="group">
               <div className="aspect-[4/5] w-full bg-[#0a0a0f] rounded-xl overflow-hidden border border-white/10 mb-4 relative">
                 <img
-                  src="/DSC07285-4.png"
+                  src="/DSC09354.jpg"
                   alt="Mhachen R Kithan"
                   className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
@@ -413,7 +413,7 @@ export default function AboutPage() {
             <div className="group">
               <div className="aspect-[4/5] w-full bg-[#0a0a0f] rounded-xl overflow-hidden border border-white/10 mb-4 relative">
                 <img
-                  src="/kholi.png"
+                  src="/DSC09345.jpg"
                   alt="Kohli Rudy Thongru"
                   className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
@@ -424,6 +424,220 @@ export default function AboutPage() {
               <p className="font-mono-label text-mono-label text-slate-500 mt-1 uppercase tracking-widest">
                 Founder
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Founder Stories Section ─────────────────────────────────────────── */}
+        <section
+          id="founder-stories"
+          className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-[120px] space-y-8 scroll-mt-24"
+          aria-label="Founder Stories"
+        >
+          {/* Section header */}
+          <div className="text-center space-y-3 pb-4">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-white/5 border border-white/10 rounded-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-400" />
+              <span className="font-mono-label text-mono-label uppercase tracking-widest text-slate-400 text-[10px] sm:text-xs">
+                Founder Stories
+              </span>
+            </div>
+            <h2 className="font-headline-md text-headline-md text-white">
+              The people behind the product
+            </h2>
+            <p className="font-body-md text-body-md text-slate-400 max-w-lg mx-auto">
+              Two perspectives, one shared conviction — that institutional intelligence deserves better tools.
+            </p>
+          </div>
+
+          {/* ── Individual founder story cards ─── */}
+          <div className="flex flex-col gap-6 sm:gap-8">
+
+            {/* ─ Founder 1: Mhachen R Kithan ─ */}
+            <article className="group bg-[#0a0a0f] border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-white/20 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_8px_40px_-12px_rgba(255,255,255,0.06)]">
+              {/*
+                Mobile: stacked (photo on top, text below)
+                md+:   two-column flex (photo left ~280px, text right fills)
+              */}
+              <div className="flex flex-col md:flex-row">
+                {/* Photo */}
+                <div className="w-full md:w-[280px] md:flex-shrink-0 aspect-[4/3] md:aspect-auto md:min-h-[340px] overflow-hidden">
+                  <img
+                    src="/DSC09362.jpg"
+                    alt="Mhachen R Kithan"
+                    className="w-full h-full object-cover object-center grayscale transition-all duration-500 group-hover:grayscale-[0.4]"
+                    style={{ minHeight: "200px" }}
+                  />
+                </div>
+
+                {/* Text content */}
+                <div className="flex flex-col justify-center p-6 sm:p-8 md:p-10 space-y-4 flex-1">
+                  {/* Label */}
+                  <span className="font-mono-label text-mono-label uppercase tracking-widest text-indigo-400 text-[10px] sm:text-xs">
+                    Founder
+                  </span>
+
+                  {/* Name */}
+                  <h3 className="font-label-sm text-label-sm font-bold text-white text-lg sm:text-xl leading-snug">
+                    Mhachen R Kithan
+                  </h3>
+
+                  {/* Divider */}
+                  <div className="h-px w-10 bg-white/15" />
+
+                  {/* Bio */}
+                  <p className="font-body-md text-body-md text-slate-400 leading-relaxed text-sm sm:text-base max-w-prose">
+                    I’m Mhachen Kithan, a 20-year-old computer science student and founder of Ki-Khobor. My journey into entrepreneurship started somewhat unexpectedly at the NE Tech Summit at NIELIT Kohima. It was our very first pitching experience, and honestly, we were just figuring things out as we went.
+                    We didn’t have much experience, and we weren’t even sure what to expect. We just had an idea we believed in, a lot of excitement, and the courage to stand in front of people and present it.
+                    Somehow, we managed to win, Crazy Right....
+                    And that experience changed the way I looked at ideas. It made me realise that entrepreneurship wasn’t just about having a great idea—it was about having the courage to build it, put yourself out there, hear criticism, learn, and keep going.
+                    From that first experience, I started taking entrepreneurship more seriously. I began participating in more competitions, meeting new people, working with different teams, and learning about the business side of turning an idea into something real.
+                    I’m still figuring things out, and I’m still learning with every step. But somewhere along the way, I realised that I genuinely enjoy the process—the uncertainty, the challenges, the small wins, and everything in between.
+                    For me, this journey is still just beginning, and I’m excited to see where it takes me.
+                  </p>
+
+                  {/* Expertise tags */}
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {["AI Research", "Product Architecture", "Data Engineering"].map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[10px] sm:text-xs font-medium uppercase tracking-wider px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/10 text-slate-400"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            {/* ─ Founder 2: Kohli Rudy Thongru ─ */}
+            <article className="group bg-[#0a0a0f] border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-white/20 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_8px_40px_-12px_rgba(255,255,255,0.06)]">
+              <div className="flex flex-col md:flex-row">
+                {/* Photo */}
+                <div className="w-full md:w-[280px] md:flex-shrink-0 aspect-[4/3] md:aspect-auto md:min-h-[340px] overflow-hidden">
+                  <img
+                    src="/DSC09349.jpg"
+                    alt="Kohli Rudy Thongru"
+                    className="w-full h-full object-cover object-center grayscale transition-all duration-500 group-hover:grayscale-[0.4]"
+                    style={{ minHeight: "200px" }}
+                  />
+                </div>
+
+                {/* Text content */}
+                <div className="flex flex-col justify-center p-6 sm:p-8 md:p-10 space-y-4 flex-1">
+                  {/* Label */}
+                  <span className="font-mono-label text-mono-label uppercase tracking-widest text-indigo-400 text-[10px] sm:text-xs">
+                    Founder
+                  </span>
+
+                  {/* Name */}
+                  <h3 className="font-label-sm text-label-sm font-bold text-white text-lg sm:text-xl leading-snug">
+                    Kohli Rudy Thongru
+                  </h3>
+
+                  {/* Divider */}
+                  <div className="h-px w-10 bg-white/15" />
+
+                  {/* Bio */}
+                  <p className="font-body-md text-body-md text-slate-400 leading-relaxed text-sm sm:text-base max-w-prose">
+                    I’m Kohli Rudy Thongru, a 21-year-old builder, and founder of Ki-Khobor.
+                    I’ve always been curious about technology, but over time that curiosity grew into an interest in startups, entrepreneurship, and turning ideas into something real. I enjoy experimenting, figuring things out, and learning by actually building rather than just talking about an idea.
+                    A lot of my journey has been about trying things—working on projects, taking part in competitions, pitching ideas, organizing initiatives, and learning from the things that didn't go as planned. Each experience has made me more willing to take an idea beyond my head and actually give it a shot.
+                    I know not everything I try will work. But I’d rather try, fail, and learn from it than do nothing and lose the opportunity to find out what I could have built.
+                    More than anything, I want the things I build to have some meaning beyond myself. If I’m going to put my time and energy into something, I want it to benefit the people around me and contribute something to the community I come from.
+                    That’s a big part of what led me to Ki-Khobor.
+                    I saw a problem that students experience every day: information is often available, but finding the right information at the right time isn't always easy. Instead of just accepting that as the way things are, I wanted to try building something that could actually make it easier.
+                    Ki-Khobor is still early, and there’s a lot I’m learning along the way. But that’s what I enjoy about building—trying something, learning from it, and making the next version better.
+                    I don't know exactly where this journey will take me.
+                    But I know I want to keep building things that are useful, keep taking chances, and hopefully leave the people around me a little better off because I tried.
+                  </p>
+
+                  {/* Expertise tags */}
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {["Strategy & GTM", "Institutional Consulting", "Systems Design"].map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[10px] sm:text-xs font-medium uppercase tracking-wider px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/10 text-slate-400"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          {/* ── Combined founding story wide card ─────────────────────────── */}
+          <div className="group bg-[#0a0a0f] border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-white/20 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_12px_48px_-16px_rgba(99,102,241,0.12)]">
+            <div className="flex flex-col lg:flex-row">
+
+              {/* Left: dual portrait collage */}
+              <div className="w-full lg:w-[380px] lg:flex-shrink-0 relative overflow-hidden"
+                style={{ minHeight: "280px" }}>
+                {/* Stacked grayscale portraits */}
+                {/* Single full-bleed photo */}
+                <img
+                  src="/DSC09379.jpg"
+                  alt="Ki-Khobor founders"
+                  className="absolute inset-0 w-full h-full object-cover object-center grayscale transition-all duration-700 group-hover:grayscale-[0.3]"
+                />
+                {/* Gradient overlay for text readability on mobile */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "linear-gradient(to bottom, transparent 40%, #0a0a0f 100%)",
+                  }}
+                />
+                {/* "Origin Story" badge over image */}
+                <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 bg-black/60 backdrop-blur-sm border border-white/10 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
+                  <span className="font-mono-label text-mono-label uppercase tracking-widest text-slate-300 text-[10px]">
+                    Origin Story
+                  </span>
+                </div>
+              </div>
+
+              {/* Right: narrative text */}
+              <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-12 space-y-5 flex-1">
+                {/* Eyebrow */}
+                <span className="font-mono-label text-mono-label uppercase tracking-widest text-indigo-400 text-[10px] sm:text-xs">
+                  How Ki-Khobor Began
+                </span>
+
+                <h3 className="font-headline-md text-headline-md text-white text-xl sm:text-2xl leading-tight">
+                  Built from conviction, not a pitch deck
+                </h3>
+
+                <div className="h-px w-12 bg-indigo-500/50" />
+
+                <div className="space-y-4 font-body-md text-body-md text-slate-400 leading-relaxed text-sm sm:text-base max-w-prose">
+                  <p>
+                    Ki-Khobor started with two friends, Mhachen Kithan and Kohli Sangtam, who shared a common interest in technology, ideas, and the excitement of building something of our own.
+                    Our journey into entrepreneurship wasn’t a straight path. It started with small ideas, conversations, competitions, and a lot of trial and error. Our first pitching experience at the NE Tech Summit at NIELIT Kohima was where we got our first real taste of what it meant to put an idea in front of people. Somehow, we managed to win—and that gave us the confidence to keep going.
+                    Since then, we’ve had our share of wins and losses. There were competitions where we spent sleepless nights building and refining our ideas, only to walk away without the result we wanted. Vibe Coding was one of those experiences. It was disappointing after everything we had put into it, but it also reminded us that entrepreneurship isn’t always about winning. Sometimes, the lessons from losing stay with you longer.
+                  </p>
+                  <p>
+                    Through all these experiences, we kept learning, challenging each other, trying new things, and slowly understanding what it actually takes to turn an idea into something real.
+                    That journey eventually led us to Ki-Khobor.
+                    We’re still students, still learning, and still figuring things out. But we’ve learned to value the process—the wins, the failures, the late nights, and everything in between.
+                    And this is only the beginning.
+                  </p>
+                </div>
+
+                {/* Quote callout */}
+                <div className="border-l-[2px] border-indigo-500/50 pl-4 mt-2">
+                  <p className="text-slate-300 italic text-sm sm:text-base leading-relaxed font-body-md text-body-md">
+                    &ldquo;We didn&apos;t start with a product. We started with a problem we both
+                    couldn&apos;t stop thinking about.&rdquo;
+                  </p>
+                  <span className="text-[10px] text-slate-500 uppercase tracking-widest font-mono-label text-mono-label mt-1 block">
+                    — The Founders, Ki-Khobor
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
