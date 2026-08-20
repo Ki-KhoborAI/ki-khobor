@@ -158,9 +158,7 @@ function AboutHero() {
             {/* Stats strip */}
             <div className="flex flex-wrap gap-8 pt-2">
               {[
-                { value: "2026", label: "Founded" },
-                { value: "10K+", label: "Students Served" },
-                { value: "99%", label: "Uptime SLA" },
+                { value: "2026", label: "Founded" }
               ].map(({ value, label }) => (
                 <div key={label} className="space-y-0.5">
                   <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">
