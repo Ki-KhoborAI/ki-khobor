@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -157,7 +158,7 @@ function AboutHero() {
             {/* Stats strip */}
             <div className="flex flex-wrap gap-8 pt-2">
               {[
-                { value: "2024", label: "Founded" },
+                { value: "2026", label: "Founded" },
                 { value: "10K+", label: "Students Served" },
                 { value: "99%", label: "Uptime SLA" },
               ].map(({ value, label }) => (
@@ -437,12 +438,18 @@ export default function AboutPage() {
               Join the forward-thinking institutions that are already using Ki-Khobor to transform their data into clarity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <button className="bg-indigo-600 text-white px-8 py-3 rounded-xl border border-indigo-500/40 font-label-sm text-label-sm hover:bg-indigo-500 transition-colors">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center bg-indigo-600 text-white px-8 py-3 rounded-xl border border-indigo-500/40 font-label-sm text-label-sm hover:bg-indigo-500 transition-colors"
+              >
                 Request a Demo
-              </button>
-              <button className="bg-transparent text-white px-8 py-3 rounded-xl border border-white/15 font-label-sm text-label-sm hover:bg-white/5 transition-colors">
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center bg-transparent text-white px-8 py-3 rounded-xl border border-white/15 font-label-sm text-label-sm hover:bg-white/5 transition-colors"
+              >
                 Contact Sales
-              </button>
+              </Link>
             </div>
           </div>
         </section>
