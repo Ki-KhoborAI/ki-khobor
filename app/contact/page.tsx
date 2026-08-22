@@ -41,6 +41,10 @@ export default function ContactPage() {
       });
       if (res.ok) {
         setFormState("submitted");
+        setTimeout(() => {
+          setFormState("idle");
+          setFormData({ name: "", email: "", organization: "", phone: "", message: "" });
+        }, 5000);
       } else {
         setFormState("error");
       }
