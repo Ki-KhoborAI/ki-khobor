@@ -68,7 +68,7 @@ export default function ContactPage() {
 
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
-          
+
           {/* Contact Form (Spans 8 columns) */}
           <div className="lg:col-span-8 bg-[#0a0a0f] border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12 relative overflow-hidden">
             {/* Decorative Accent Bar */}
@@ -214,7 +214,7 @@ export default function ContactPage() {
                     className="bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm px-8 py-3 rounded-xl border border-indigo-500/40 transition-all shadow-md active:scale-95 flex items-center gap-2 disabled:opacity-50"
                     type="submit"
                   >
-                  <span>{formState === "submitting" ? "Sending..." : "Send Message"}</span>
+                    <span>{formState === "submitting" ? "Sending..." : "Send Message"}</span>
                     <span className="material-symbols-outlined text-[18px]">send</span>
                   </button>
                 </div>
@@ -224,7 +224,7 @@ export default function ContactPage() {
 
           {/* Direct Contact Info (Spans 4 columns) */}
           <div className="lg:col-span-4 flex flex-col gap-6 sm:gap-8">
-            
+
             {/* Contact Details Card */}
             <div className="bg-[#0a0a0f] border border-white/10 rounded-2xl p-6 sm:p-8 flex-1 flex flex-col justify-center">
               <h3 className="text-xs font-mono text-slate-400 uppercase tracking-widest mb-8">
