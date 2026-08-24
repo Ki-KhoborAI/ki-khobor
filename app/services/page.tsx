@@ -16,55 +16,55 @@ interface ServiceItem {
 
 const SERVICES_DATA: ServiceItem[] = [
   {
-    id: "ai-development",
+    id: "institutional-ai-assistants",
     number: "01",
-    title: "AI Development",
+    title: "Institutional AI Assistants",
     shortDesc:
-      "Architecting bespoke, intelligent systems engineered specifically for institutional knowledge, workflows, and academic rigor.",
+      "Building intelligent AI assistants that provide instant, accurate answers from institutional knowledge, policies, schedules, and academic information.",
     icon: "psychology",
     tags: [
-      "AI-powered institutional solutions",
-      "Custom AI assistants",
-      "Intelligent automation",
+      "Custom institutional AI assistants",
+      "Student & staff support",
+      "24/7 information access",
     ],
   },
   {
-    id: "ai-integration",
+    id: "knowledge-systems",
     number: "02",
-    title: "AI Integration",
+    title: "Knowledge & Information Systems",
     shortDesc:
-      "Seamlessly embedding advanced language models and cognitive search into existing campus databases and ERPs.",
+      "Structuring institutional information into intelligent, searchable systems that make critical knowledge easier to access and manage.",
     icon: "hub",
     tags: [
-      "Integrating AI into existing institutional workflows",
-      "API and platform integration",
-      "AI-powered information systems",
+      "Institutional knowledge bases",
+      "Document & data organization",
+      "Intelligent information retrieval",
     ],
   },
   {
-    id: "institutional-automation",
+    id: "workflow-automation",
     number: "03",
-    title: "Institutional Automation",
+    title: "Workflow Automation",
     shortDesc:
-      "Eliminating repetitive inquiry bottlenecks and streamlining complex administrative workflows with zero data loss.",
+      "Automating repetitive institutional tasks and information workflows to reduce manual workload and improve operational efficiency.",
     icon: "auto_mode",
     tags: [
-      "Automating repetitive institutional processes",
-      "Improving operational efficiency",
-      "Reducing manual workload",
+      "Administrative automation",
+      "Automated information workflows",
+      "Process optimization",
     ],
   },
   {
-    id: "ai-consulting",
+    id: "ai-integration-deployment",
     number: "04",
-    title: "AI Consulting",
+    title: "AI Integration & Deployment",
     shortDesc:
-      "Providing strategic roadmaps, compliance audits, and pragmatic AI implementation blueprints for academic leadership.",
+      "Integrating AI into existing institutional websites, databases, platforms, and digital workflows without disrupting existing systems.",
     icon: "insights",
     tags: [
-      "AI strategy",
-      "Digital transformation",
-      "Identifying practical AI use cases",
+      "Website & platform integration",
+      "Database/API integration",
+      "AI deployment & maintenance",
     ],
   },
 ];
