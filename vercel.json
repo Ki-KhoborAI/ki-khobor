@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/txg-nagaland",
+      "destination": "https://txg-kikhobor-help-desk.vercel.app/txg-nagaland"
+    },
+    {
+      "source": "/txg-nagaland/:path*",
+      "destination": "https://txg-kikhobor-help-desk.vercel.app/txg-nagaland/:path*"
+    }
+  ]
+}

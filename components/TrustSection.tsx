@@ -6,7 +6,7 @@ import KiKhoborLogo from "./KiKhoborLogo";
 
 // ─── Product URLs ────────────────────────────────────────────────────────────
 const TETSO_URL = "https://ki-khobor-tetso-p9yq.vercel.app/";
-const TXG_URL = "PRODUCT_2_LINK";
+const TXG_URL = "/txg-nagaland";
 // ─────────────────────────────────────────────────────────────────────────────
 
 // Inline SVG sub-brand mark for "TETSO"
@@ -69,13 +69,15 @@ function ProductCard({
   href,
   "aria-label": ariaLabel,
 }: ProductCardProps) {
+  // External URLs open in a new tab; same-origin URLs navigate in-place.
+  const isExternal = typeof href === "string" && /^https?:\/\//.test(href);
   // Shared card wrapper — conditionally wraps in an <a> if href is provided
   if (href) {
     return (
       <a
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
         aria-label={ariaLabel}
         className="group block w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-2xl"
         // On desktop hover is handled via CSS group-hover. On touch, we rely on the
