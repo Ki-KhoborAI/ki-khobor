@@ -5,54 +5,8 @@ import Link from "next/link";
 import KiKhoborLogo from "./KiKhoborLogo";
 
 // ─── Product URLs ────────────────────────────────────────────────────────────
-const TETSO_URL = "https://ki-khobor-tetso-p9yq.vercel.app/";
 const TXG_URL = "/txg-nagaland";
 // ─────────────────────────────────────────────────────────────────────────────
-
-// Inline SVG sub-brand mark for "TETSO"
-function TetsoMark({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 320 80"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-label="Tetso wordmark"
-    >
-      {/* T */}
-      <rect x="0" y="8" width="52" height="10" rx="5" fill="currentColor" />
-      <rect x="21" y="8" width="10" height="64" rx="5" fill="currentColor" />
-      {/* E */}
-      <rect x="62" y="8" width="10" height="64" rx="5" fill="currentColor" />
-      <rect x="62" y="8" width="44" height="10" rx="5" fill="currentColor" />
-      <rect x="62" y="35" width="36" height="9" rx="4.5" fill="currentColor" />
-      <rect x="62" y="62" width="44" height="10" rx="5" fill="currentColor" />
-      {/* T */}
-      <rect x="118" y="8" width="52" height="10" rx="5" fill="currentColor" />
-      <rect x="139" y="8" width="10" height="64" rx="5" fill="currentColor" />
-      {/* S */}
-      <path
-        d="M 180 42 C 180 35 186 30 195 30 H 214 C 221 30 226 25 226 18 C 226 11 221 8 214 8 H 180"
-        stroke="currentColor"
-        strokeWidth="10"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <path
-        d="M 226 38 C 226 45 220 50 211 50 H 192 C 185 50 180 55 180 62 C 180 69 185 72 192 72 H 226"
-        stroke="currentColor"
-        strokeWidth="10"
-        strokeLinecap="round"
-        fill="none"
-      />
-      {/* O */}
-      <rect x="240" y="8" width="10" height="64" rx="5" fill="currentColor" />
-      <rect x="300" y="8" width="10" height="64" rx="5" fill="currentColor" />
-      <rect x="240" y="8" width="70" height="10" rx="5" fill="currentColor" />
-      <rect x="240" y="62" width="70" height="10" rx="5" fill="currentColor" />
-    </svg>
-  );
-}
 
 interface ProductCardProps {
   children: React.ReactNode;
@@ -118,10 +72,8 @@ function ProductCard({
 
 export default function TrustSection() {
   // Mobile-first: track which card has been tapped/revealed
-  const [tetsoRevealed, setTetsoRevealed] = useState(false);
   const [txgRevealed, setTxgRevealed] = useState(false);
 
-  const toggleTetso = useCallback(() => setTetsoRevealed((v) => !v), []);
   const toggleTxg = useCallback(() => setTxgRevealed((v) => !v), []);
 
   return (
@@ -138,122 +90,10 @@ export default function TrustSection() {
           </h2>
         </div>
 
-        {/* Cards Grid — stacked on mobile, 2-col on md+ */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        {/* Cards Grid — single card left-aligned */}
+        <div className="max-w-xl">
 
-          {/* ── Card 1: Ki-Khobor Tetso ──────────────────────────────────── */}
-          <ProductCard
-            isRevealed={tetsoRevealed}
-            onToggle={toggleTetso}
-            href={TETSO_URL}
-            aria-label="Ki-Khobor Tetso — tap to learn more, then visit"
-          >
-            <div
-              className={`
-                relative overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c11]
-                transition-all duration-500 ease-out min-h-[280px] sm:min-h-[320px]
-                group-hover:border-white/20 group-hover:bg-[#111118]
-                group-focus-visible:border-white/30
-                ${tetsoRevealed ? "border-white/20 bg-[#111118]" : ""}
-              `}
-            >
-              {/* Subtle inner glow on hover/reveal */}
-              <div
-                className={`
-                  pointer-events-none absolute inset-0 rounded-2xl transition-opacity duration-500
-                  bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.05)_0%,_transparent_60%)]
-                  opacity-0 group-hover:opacity-100 ${tetsoRevealed ? "opacity-100" : ""}
-                `}
-              />
-
-              {/* Card content */}
-              <div className="relative z-10 p-7 sm:p-8 flex flex-col h-full min-h-[280px] sm:min-h-[320px]">
-
-                {/* Top row: logo badge + arrow */}
-                <div className="flex items-start justify-between mb-8">
-                  {/* Tetso logo badge */}
-                  <div className="inline-flex items-center bg-white/5 border border-white/10 rounded-2xl px-3 py-2">
-                    <img
-                      src="/kikhoboroldlogo.png"
-                      alt="Ki-Khobor Tetso logo"
-                      className="h-10 sm:h-12 w-auto object-contain"
-                    />
-                  </div>
-
-                  {/* Arrow icon — animates on hover/reveal */}
-                  <span
-                    className={`
-                      material-symbols-outlined text-slate-600 text-xl transition-all duration-300
-                      group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5
-                      ${tetsoRevealed ? "text-white translate-x-0.5 -translate-y-0.5" : ""}
-                    `}
-                  >
-                    arrow_outward
-                  </span>
-                </div>
-
-                {/* Product title */}
-                <div className="mb-5">
-                  <p className="text-2xl sm:text-3xl font-bold tracking-tight text-white">Ki-Khobor Tetso</p>
-                </div>
-
-                {/* Static tagline — always visible */}
-                <p className="text-xs sm:text-sm text-slate-500 font-medium tracking-wide mb-4">
-                  Institutional Intelligence Platform
-                </p>
-
-                {/* Reveal panel — visible on hover (desktop) or tap (mobile) */}
-                <div
-                  className={`
-                    flex-grow flex flex-col justify-end gap-4
-                    transition-all duration-500 ease-out
-                    group-hover:opacity-100 group-hover:translate-y-0
-                    ${tetsoRevealed
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-3 md:opacity-0 md:translate-y-3"
-                    }
-                    md:opacity-0 md:translate-y-3 md:group-hover:opacity-100 md:group-hover:translate-y-0
-                  `}
-                >
-                  <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                    Ki-Khobor Tetso College is a locally built, AI-powered information platform designed to make verified campus and event information easier to access. It provides relevant answers from trusted institutional sources, helping students and visitors ask, discover, and navigate with confidence.
-                  </p>
-
-                  {/* Feature chips */}
-                  <div className="flex flex-wrap gap-2">
-                    {["AI-Powered", "Verified Sources", "Campus Intelligence", "Zero Hallucinations"].map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[10px] sm:text-xs text-slate-400 border border-white/10 rounded-full px-2.5 py-1 bg-white/5"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Visit CTA — shown on mobile after reveal */}
-                  <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400 mt-1 md:hidden">
-                    <span className="material-symbols-outlined text-base">touch_app</span>
-                    <span>Tap again to visit Tetso</span>
-                  </div>
-                </div>
-
-                {/* Mobile tap hint — shown when NOT revealed */}
-                <div
-                  className={`
-                    flex items-center gap-1.5 text-xs text-slate-600 mt-auto pt-4 md:hidden
-                    transition-opacity duration-300
-                    ${tetsoRevealed ? "opacity-0 pointer-events-none" : "opacity-100"}
-                  `}
-                >
-                  <span className="material-symbols-outlined text-base">touch_app</span>
-                  <span>Tap to learn more</span>
-                </div>
-              </div>
-            </div>
-          </ProductCard>
-
-          {/* ── Card 2: Ki-Khobor TXG ─────────────────────────────────────── */}
+          {/* ── Card: Ki-Khobor TXG ─────────────────────────────────────── */}
           <ProductCard
             isRevealed={txgRevealed}
             onToggle={toggleTxg}
