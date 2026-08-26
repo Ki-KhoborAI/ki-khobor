@@ -5,7 +5,7 @@ import Link from "next/link";
 import KiKhoborLogo from "./KiKhoborLogo";
 
 // ─── Product URLs ────────────────────────────────────────────────────────────
-const TXG_URL = "/txg-nagaland";
+const TXG_URL = "https://www.ki-khobor.com/txg-nagaland/help-desk";
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface ProductCardProps {
