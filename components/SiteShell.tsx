@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Search } from "lucide-react";
@@ -20,13 +21,22 @@ const NAV = [
   { href: "/about-txg", label: "About" },
 ];
 
-/** Ki-Khobor wordmark (left). Swap for a logo image if one is provided. */
+/** Ki-Khobor logo (left). */
 function KiKhoborMark() {
   return (
-    <Link href="/help-desk" className="flex shrink-0 items-center gap-2">
-      <span className="text-sm font-semibold tracking-tight md:text-base">
-        Ki<span className="text-[var(--accent)]">·</span>Khobor
-      </span>
+    <Link
+      href="/help-desk"
+      className="flex h-10 w-36 shrink-0 items-center md:h-12 md:w-40"
+      aria-label="Ki-Khobor Help Desk"
+    >
+      <Image
+        src={`${BP}/7.png`}
+        alt="Ki-Khobor"
+        width={128}
+        height={40}
+        priority
+        className="h-full w-full object-contain object-left"
+      />
     </Link>
   );
 }

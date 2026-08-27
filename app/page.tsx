@@ -24,9 +24,14 @@ export default async function Home() {
 
       {/* Top logo bar */}
       <div className="absolute inset-x-0 top-0 z-20 flex items-center px-5 py-4 md:px-8">
-        <span className="text-sm font-semibold tracking-tight md:text-base">
-          Ki<span className="text-[var(--accent)]">·</span>Khobor
-        </span>
+        <Image
+          src={`${BP}/7.png`}
+          alt="Ki-Khobor"
+          width={128}
+          height={40}
+          priority
+          className="h-10 w-36 object-contain object-left md:h-12 md:w-40"
+        />
       </div>
 
       {/* Content */}
