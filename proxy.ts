@@ -8,8 +8,9 @@ export async function proxy(request: NextRequest) {
 export const config = {
   matcher: [
     /*
-     * Match all request paths except static assets and image files.
+     * Match all request paths except Next.js internals (_next/), static assets, and image files.
+     * This ensures middleware doesn't interfere with RSC requests or other internal Next.js operations.
      */
-    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)",
+    "/((?!_next/|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)",
   ],
 };
