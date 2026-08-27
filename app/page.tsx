@@ -30,7 +30,7 @@ export default async function Home() {
           width={128}
           height={40}
           priority
-          className="h-10 w-36 object-contain object-left md:h-12 md:w-40"
+          className="h-11 w-40 object-contain object-left md:h-[52px] md:w-44"
         />
       </div>
 

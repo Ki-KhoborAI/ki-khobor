@@ -26,7 +26,7 @@ function KiKhoborMark() {
   return (
     <Link
       href="/help-desk"
-      className="flex h-10 w-36 shrink-0 items-center md:h-12 md:w-40"
+      className="flex h-11 w-40 shrink-0 items-center md:h-[52px] md:w-44"
       aria-label="Ki-Khobor Help Desk"
     >
       <Image
