@@ -44,9 +44,32 @@ function KiKhoborMark() {
 /** TXG Expo Nagaland logo (right). */
 function TxgMark() {
   return (
-    <Link href="/help-desk" className="flex shrink-0 items-center" aria-label="TXG Expo Nagaland">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={`${BP}/txg-logo.png`} alt="TXG Expo Nagaland" className="h-6 w-auto md:h-9" />
+    <Link
+      href="/help-desk"
+      className="flex shrink-0 items-center gap-2"
+      aria-label="TXG Expo Nagaland"
+    >
+      <Image
+        src={`${BP}/txg-logo.png`}
+        alt="TXG Expo Nagaland"
+        width={953}
+        height={244}
+        className="h-8 w-auto object-contain md:h-10"
+      />
+      <Image
+        src={`${BP}/txg-emblem.png`}
+        alt="TXG emblem"
+        width={242}
+        height={244}
+        className="h-8 w-auto object-contain md:h-10"
+      />
+      <Image
+        src={`${BP}/txg-controller.png`}
+        alt="TXG controller"
+        width={238}
+        height={238}
+        className="h-8 w-auto object-contain md:h-10"
+      />
     </Link>
   );
 }
