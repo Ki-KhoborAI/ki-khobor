@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -392,11 +393,20 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {/* Founder 1 */}
             <div className="group">
+              {/*
+                Portrait card: aspect-[4/5] parent is `relative` + `overflow-hidden`.
+                `fill` makes the Image cover the full parent area via CSS.
+                sizes: full viewport on mobile (<640px), half viewport on sm+.
+                loading="lazy" is the default for non-priority images.
+              */}
               <div className="aspect-[4/5] w-full bg-[#0a0a0f] rounded-xl overflow-hidden border border-white/10 mb-4 relative">
-                <img
+                <Image
                   src="/DSC09354.jpg"
-                  alt="Mhachen R Kithan"
-                  className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500"
+                  alt="Mhachen R Kithan — Co-founder of Ki-Khobor"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500"
+                  loading="lazy"
                 />
               </div>
               <h4 className="font-label-sm text-label-sm font-semibold text-white">
@@ -410,10 +420,13 @@ export default function AboutPage() {
             {/* Founder 2 */}
             <div className="group">
               <div className="aspect-[4/5] w-full bg-[#0a0a0f] rounded-xl overflow-hidden border border-white/10 mb-4 relative">
-                <img
+                <Image
                   src="/DSC09345.jpg"
-                  alt="Kohli Rudy Thongru"
-                  className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500"
+                  alt="Kohli Rudy Thongru — Co-founder of Ki-Khobor"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500"
+                  loading="lazy"
                 />
               </div>
               <h4 className="font-label-sm text-label-sm font-semibold text-white">
@@ -459,12 +472,18 @@ export default function AboutPage() {
               */}
               <div className="flex flex-col md:flex-row">
                 {/* Photo */}
-                <div className="w-full md:w-[280px] md:flex-shrink-0 aspect-[4/3] md:aspect-auto md:min-h-[340px] overflow-hidden">
-                  <img
+                {/*
+                  Story card photo: on mobile fills full width (100vw), on md+ fixed 280px.
+                  Parent needs `relative` for fill to work — add it here.
+                */}
+                <div className="w-full md:w-[280px] md:flex-shrink-0 aspect-[4/3] md:aspect-auto md:min-h-[340px] overflow-hidden relative" style={{ minHeight: "200px" }}>
+                  <Image
                     src="/DSC09362.jpg"
-                    alt="Mhachen R Kithan"
-                    className="w-full h-full object-cover object-center grayscale transition-all duration-500 group-hover:grayscale-[0.4]"
-                    style={{ minHeight: "200px" }}
+                    alt="Mhachen R Kithan — Co-founder of Ki-Khobor"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 280px"
+                    className="object-cover object-center grayscale transition-all duration-500 group-hover:grayscale-[0.4]"
+                    loading="lazy"
                   />
                 </div>
 
@@ -513,12 +532,14 @@ export default function AboutPage() {
             <article className="group bg-[#0a0a0f] border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-white/20 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_8px_40px_-12px_rgba(255,255,255,0.06)]">
               <div className="flex flex-col md:flex-row">
                 {/* Photo */}
-                <div className="w-full md:w-[280px] md:flex-shrink-0 aspect-[4/3] md:aspect-auto md:min-h-[340px] overflow-hidden">
-                  <img
+                <div className="w-full md:w-[280px] md:flex-shrink-0 aspect-[4/3] md:aspect-auto md:min-h-[340px] overflow-hidden relative" style={{ minHeight: "200px" }}>
+                  <Image
                     src="/DSC09349.jpg"
-                    alt="Kohli Rudy Thongru"
-                    className="w-full h-full object-cover object-center grayscale transition-all duration-500 group-hover:grayscale-[0.4]"
-                    style={{ minHeight: "200px" }}
+                    alt="Kohli Rudy Thongru — Co-founder of Ki-Khobor"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 280px"
+                    className="object-cover object-center grayscale transition-all duration-500 group-hover:grayscale-[0.4]"
+                    loading="lazy"
                   />
                 </div>
 
@@ -574,12 +595,14 @@ export default function AboutPage() {
               {/* Left: dual portrait collage */}
               <div className="w-full lg:w-[380px] lg:flex-shrink-0 relative overflow-hidden"
                 style={{ minHeight: "280px" }}>
-                {/* Stacked grayscale portraits */}
-                {/* Single full-bleed photo */}
-                <img
+                {/* Single full-bleed photo — fill within the already-`absolute inset-0` parent */}
+                <Image
                   src="/DSC09379.jpg"
-                  alt="Ki-Khobor founders"
-                  className="absolute inset-0 w-full h-full object-cover object-center grayscale transition-all duration-700 group-hover:grayscale-[0.3]"
+                  alt="Ki-Khobor founders Mhachen and Kohli at the NE Tech Summit"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 380px"
+                  className="object-cover object-center grayscale transition-all duration-700 group-hover:grayscale-[0.3]"
+                  loading="lazy"
                 />
                 {/* Gradient overlay for text readability on mobile */}
                 <div
