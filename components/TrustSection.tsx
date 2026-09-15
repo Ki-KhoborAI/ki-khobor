@@ -94,7 +94,7 @@ export default function TrustSection() {
         </div>
 
         {/* Cards Grid — responsive two-column layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 max-w-3xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 w-full max-w-3xl">
 
           {/* ── Card: Ki-Khobor TXG ─────────────────────────────────────── */}
           <ProductCard
@@ -127,7 +127,7 @@ export default function TrustSection() {
                 {/* Top row: logo badge + arrow */}
                 <div className="flex items-start justify-between mb-8">
                   {/* TXG logo badge — fixed size so both badges match */}
-                  <div className="flex items-center justify-center w-[72px] h-[56px] sm:w-[88px] sm:h-[64px] bg-white/5 border border-white/10 rounded-2xl">
+                  <div className="flex items-center justify-center w-[72px] h-[56px] sm:w-[88px] sm:h-[64px] bg-white/5 border border-white/10 rounded-2xl overflow-hidden relative">
                     <img
                       src="/TXGColour.png"
                       alt="Ki-Khobor TXG logo"
@@ -239,7 +239,7 @@ export default function TrustSection() {
                 {/* Top row: logo badge + arrow */}
                 <div className="flex items-start justify-between mb-8">
                   {/* NIS logo badge — fixed size so both badges match */}
-                  <div className="flex items-center justify-center w-[72px] h-[56px] sm:w-[88px] sm:h-[64px] bg-white/5 border border-white/10 rounded-2xl">
+                  <div className="flex items-center justify-center w-[72px] h-[56px] sm:w-[88px] sm:h-[64px] bg-white/5 border border-white/10 rounded-2xl overflow-hidden relative">
                     <img
                       src="/PC 7.png"
                       alt="NIS 2026 logo"
