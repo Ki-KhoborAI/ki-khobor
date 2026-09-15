@@ -239,11 +239,13 @@ export default function TrustSection() {
                 {/* Top row: logo badge + arrow */}
                 <div className="flex items-start justify-between mb-8">
                   {/* NIS logo badge — fixed size so both badges match */}
+                  {/* nis-logo.png: no-space filename for Linux/Vercel compatibility */}
                   <div className="flex items-center justify-center w-[72px] h-[56px] sm:w-[88px] sm:h-[64px] bg-white/5 border border-white/10 rounded-2xl overflow-hidden relative">
                     <img
-                      src="/PC 7.png"
+                      src="/nis-logo.png"
                       alt="NIS 2026 logo"
-                      className="max-h-[40px] sm:max-h-[48px] max-w-full w-auto object-contain scale-[1.8] sm:scale-[2.2]"
+                      className="w-full h-full object-contain"
+                      style={{ mixBlendMode: "multiply" }}
                     />
                   </div>
 
