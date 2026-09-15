@@ -213,7 +213,7 @@ export default function TrustSection() {
             isRevealed={nisRevealed}
             onToggle={toggleNis}
             href={NIS_URL}
-            aria-label="NIS 2026 — tap to learn more, then visit"
+            aria-label="ki-Khobor NIS  — tap to learn more, then visit"
           >
             <div
               className={`
@@ -263,7 +263,7 @@ export default function TrustSection() {
 
                 {/* NIS product title */}
                 <div className="mb-5">
-                  <p className="text-2xl sm:text-3xl font-bold tracking-tight text-white">NIS 2026</p>
+                  <p className="text-2xl sm:text-3xl font-bold tracking-tight text-white">Ki-Khobor NIS</p>
                 </div>
 
                 {/* Static tagline — always visible */}
