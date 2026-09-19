@@ -156,13 +156,15 @@ function AboutHero() {
               building an institutional memory engine.
             </p>
 
-            {/* Stats strip */}
-            <div className="flex flex-wrap gap-8 pt-2">
+            {/* Stats strip — traction snapshot */}
+            <div className="flex flex-wrap gap-x-6 gap-y-5 pt-2">
               {[
-                { value: "2026", label: "Founded" }
+                { value: "2026",  label: "Founded"          },
+                { value: "1.5k+", label: "People Reached"   },
+                { value: "3+",    label: "Event Experiences" },
               ].map(({ value, label }) => (
-                <div key={label} className="space-y-0.5">
-                  <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                <div key={label} className="space-y-0.5 min-w-0">
+                  <div className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-none">
                     {value}
                   </div>
                   <div className="text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest font-medium">
@@ -343,7 +345,7 @@ export default function AboutPage() {
                 A Sentient Infrastructure
               </h3>
               <p className="font-body-md text-body-md text-slate-400">
-                We envision a future where every educational institution operates with a sentient digital infrastructure—an invisible partner that anticipates needs, optimizes resources natively, and fosters a culture of continuous learning.
+                We envision a future where every educational institution operates with a sentient digital infrastructure an invisible partner that anticipates needs, optimizes resources natively, and fosters a culture of continuous learning.
               </p>
             </div>
           </div>
@@ -373,7 +375,7 @@ export default function AboutPage() {
                   </span>
                 </div>
                 <p className="font-body-lg text-body-lg text-slate-300 italic leading-relaxed">
-                  "The technology sector often treats education as an afterthought, offering repackaged enterprise tools that fail to understand the nuanced cadence of academic life. We are building Ki-Khobor to be natively institutional—designed from the ground up to respect privacy, ensure academic rigor, and integrate seamlessly into the legacy systems that hold our schools together. We build this because clarity is a right, not a luxury."
+                  "The technology sector often treats education as an afterthought, offering repackaged enterprise tools that fail to understand the nuanced cadence of academic life. We are building Ki-Khobor to be natively institutional designed from the ground up to respect privacy, ensure academic rigor, and integrate seamlessly into the legacy systems that hold our schools together. We build this because clarity is a right, not a luxury."
                 </p>
               </div>
             </div>
@@ -457,7 +459,7 @@ export default function AboutPage() {
               The people behind the product
             </h2>
             <p className="font-body-md text-body-md text-slate-400 max-w-lg mx-auto">
-              Two perspectives, one shared conviction — that institutional intelligence deserves better tools.
+              Two perspectives, one shared conviction, that institutional intelligence deserves better tools.
             </p>
           </div>
 
@@ -504,12 +506,12 @@ export default function AboutPage() {
 
                   {/* Bio */}
                   <p className="font-body-md text-body-md text-slate-400 leading-relaxed text-sm sm:text-base max-w-prose">
-                    I’m Mhachen Kithan, a 20-year-old computer science student and founder of Ki-Khobor. My journey into entrepreneurship started somewhat unexpectedly at the NE Tech Summit at NIELIT Kohima. It was our very first pitching experience, and honestly, we were just figuring things out as we went.
+                    I’m Mhachen Kithan, a 20 year old computer science student and founder of Ki-Khobor. My journey into entrepreneurship started somewhat unexpectedly at the NE Tech Summit at NIELIT Kohima. It was our very first pitching experience, and honestly, we were just figuring things out as we went.
                     We didn’t have much experience, and we weren’t even sure what to expect. We just had an idea we believed in, a lot of excitement, and the courage to stand in front of people and present it.
                     Somehow, we managed to win, Crazy Right....
-                    And that experience changed the way I looked at ideas. It made me realise that entrepreneurship wasn’t just about having a great idea—it was about having the courage to build it, put yourself out there, hear criticism, learn, and keep going.
+                    And that experience changed the way I looked at ideas. It made me realise that entrepreneurship wasn’t just about having a great idea, it was about having the courage to build it, put yourself out there, hear criticism, learn, and keep going.
                     From that first experience, I started taking entrepreneurship more seriously. I began participating in more competitions, meeting new people, working with different teams, and learning about the business side of turning an idea into something real.
-                    I’m still figuring things out, and I’m still learning with every step. But somewhere along the way, I realised that I genuinely enjoy the process—the uncertainty, the challenges, the small wins, and everything in between.
+                    I’m still figuring things out, and I’m still learning with every step. But somewhere along the way, I realised that I genuinely enjoy the process, the uncertainty, the challenges, the small wins, and everything in between.
                     For me, this journey is still just beginning, and I’m excited to see where it takes me.
                   </p>
 
@@ -560,14 +562,14 @@ export default function AboutPage() {
 
                   {/* Bio */}
                   <p className="font-body-md text-body-md text-slate-400 leading-relaxed text-sm sm:text-base max-w-prose">
-                    I’m Kohli Rudy Thongru, a 21-year-old builder, and founder of Ki-Khobor.
+                    I’m Kohli Rudy Thongru, a 21 year old builder, and founder of Ki-Khobor.
                     I’ve always been curious about technology, but over time that curiosity grew into an interest in startups, entrepreneurship, and turning ideas into something real. I enjoy experimenting, figuring things out, and learning by actually building rather than just talking about an idea.
-                    A lot of my journey has been about trying things—working on projects, taking part in competitions, pitching ideas, organizing initiatives, and learning from the things that didn't go as planned. Each experience has made me more willing to take an idea beyond my head and actually give it a shot.
+                    A lot of my journey has been about trying things, working on projects, taking part in competitions, pitching ideas, organizing initiatives, and learning from the things that didn't go as planned. Each experience has made me more willing to take an idea beyond my head and actually give it a shot.
                     I know not everything I try will work. But I’d rather try, fail, and learn from it than do nothing and lose the opportunity to find out what I could have built.
                     More than anything, I want the things I build to have some meaning beyond myself. If I’m going to put my time and energy into something, I want it to benefit the people around me and contribute something to the community I come from.
                     That’s a big part of what led me to Ki-Khobor.
                     I saw a problem that students experience every day: information is often available, but finding the right information at the right time isn't always easy. Instead of just accepting that as the way things are, I wanted to try building something that could actually make it easier.
-                    Ki-Khobor is still early, and there’s a lot I’m learning along the way. But that’s what I enjoy about building—trying something, learning from it, and making the next version better.
+                    Ki-Khobor is still early, and there’s a lot I’m learning along the way. But that’s what I enjoy about building, trying something, learning from it, and making the next version better.
                     I don't know exactly where this journey will take me.
                     But I know I want to keep building things that are useful, keep taking chances, and hopefully leave the people around me a little better off because I tried.
                   </p>
@@ -655,7 +657,7 @@ export default function AboutPage() {
                     couldn&apos;t stop thinking about.&rdquo;
                   </p>
                   <span className="text-[10px] text-slate-500 uppercase tracking-widest font-mono-label text-mono-label mt-1 block">
-                    — The Founders, Ki-Khobor
+                    The Founders, Ki-Khobor
                   </span>
                 </div>
               </div>
